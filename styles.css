@@ -291,6 +291,8 @@ details.accordion summary::-webkit-details-marker {
 .screenshot-grid img {
   width: 100%;
   height: auto;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
 }
 
