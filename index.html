@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richard Tidwell | CS 499 Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <h1>Richard Tidwell</h1>
+      <p class="hero__tagline">Full-stack engineer showcasing CS 499 capstone enhancements</p>
+      <nav class="hero__nav">
+        <a href="#overview">Overview</a>
+        <a href="#artifacts">Artifacts</a>
+        <a href="#self-assessment">Self-Assessment</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <h2>Portfolio Overview</h2>
+      <p>Welcome to my CS 499 capstone portfolio. Here you will find enhanced artifacts demonstrating software engineering, algorithms/data structures, and database skills, along with reflections and supporting documentation.</p>
+      <ul class="key-highlights">
+        <li><strong>Code Review Video:</strong> <a id="code-review-link" href="#" target="_blank">Pending link</a></li>
+        <li><strong>Milestone Narratives:</strong> <a id="narratives-link" href="#" target="_blank">Pending link</a></li>
+        <li><strong>Source Repository:</strong> <a href="https://github.com/rtidwell/CS-465" target="_blank" rel="noopener">Travlr Getaways Repo</a></li>
+      </ul>
+    </section>
+
+    <section id="artifacts" class="section">
+      <h2>Artifacts &amp; Enhancements</h2>
+      <article class="card">
+        <h3>Software Engineering &amp; Design</h3>
+        <p>TypeScript refactor of the Express API with layered architecture, structured logging, and schema validation.</p>
+        <ul>
+          <li><strong>Highlight:</strong> <code>src/app.ts</code>, <code>src/app_api/services/tripService.ts</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-two-link" href="#" target="_blank">Pending link</a></li>
+          <li><strong>Repo Branch:</strong> <code>feature/ts-refactor</code> (if applicable)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Algorithms &amp; Data Structures</h3>
+        <p>Search acceleration via LRU cache, prefix trie, and paginated queries for trip discovery.</p>
+        <ul>
+          <li><strong>Highlight:</strong> <code>src/app_api/utils/lruCache.ts</code>, <code>src/app_api/utils/prefixTrie.ts</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-three-link" href="#" target="_blank">Pending link</a></li>
+          <li><strong>Benchmarks:</strong> <code>node dist/app_api/benchmarks/searchBench.js</code></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Databases</h3>
+        <p>Reservation subsystem enabling atomic bookings and occupancy analytics across the catalog.</p>
+        <ul>
+          <li><strong>Highlight:</strong> <code>src/app_api/services/reservationService.ts</code>, <code>src/app_api/repositories/tripRepository.ts</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-four-link" href="#" target="_blank">Pending link</a></li>
+          <li><strong>API Endpoints:</strong> <code>/api/trips/:tripId/book</code>, <code>/api/reports/trips/occupancy</code></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="self-assessment" class="section">
+      <h2>Professional Self-Assessment</h2>
+      <p>Reflect on your growth, key competencies, and how the enhancements support your career goals.</p>
+      <a id="self-assessment-link" class="button" href="#" target="_blank">Pending self-assessment</a>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact &amp; Links</h2>
+      <ul>
+        <li>Email: <a href="mailto:richard.tidwell@example.com">richard.tidwell@example.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/richardtidwell" target="_blank" rel="noopener">linkedin.com/in/richardtidwell</a></li>
+        <li>GitHub: <a href="https://github.com/rtidwell" target="_blank" rel="noopener">github.com/rtidwell</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; <span id="year"></span> Richard Tidwell. CS 499 Capstone.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

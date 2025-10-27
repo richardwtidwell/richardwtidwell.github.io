@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --card: #111827;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+  --muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.2);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, var(--bg-alt), var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 3rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.hero__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero__tagline {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__nav {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero__nav a:hover {
+  transform: translateY(-2px);
+  background: rgba(56, 189, 248, 0.25);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.section {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 45px rgba(15, 23, 42, 0.35);
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.section p {
+  color: var(--muted);
+}
+
+.key-highlights {
+  list-style: none;
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.key-highlights a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+}
+
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+.card h3 {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.card code {
+  background: rgba(56, 189, 248, 0.12);
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.9), rgba(14, 165, 233, 0.85));
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .hero__nav {
+    gap: 0.65rem;
+  }
+}
