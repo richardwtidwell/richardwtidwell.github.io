@@ -1,0 +1,13 @@
+<article class="evidence">
+  <h4>Verification Evidence</h4>
+  <p>The following cURL sessions capture the booking and occupancy interactions for the reservation subsystem:</p>
+  <pre><code>curl -X POST "http://localhost:3000/api/trips/$TRIP_ID/book" \
+  -H 'Content-Type: application/json' \
+  -d '{"customerName":"Evidence Capture","customerEmail":"evidence@example.com","partySize":2}'
+</code></pre>
+  <p><img src="assets/Screenshot 2025-10-26 at 8.07.20 PM.png" alt="Booking curl screenshot" /></p>
+  <pre><code>curl -H "Authorization: Bearer $TOKEN" \
+  http://localhost:3000/api/reports/trips/occupancy
+</code></pre>
+  <p><img src="assets/jwt_secret.png" alt="Occupancy curl screenshot" /></p>
+</article>

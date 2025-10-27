@@ -1,0 +1,20 @@
+<article class="narrative">
+  <h3>Milestone Four Narrative – Databases</h3>
+  <p>Milestone Four Narrative – Databases</p>
+  <p>Artifact Overview</p>
+  <p>The database artifact is the Travlr Getaways Node/Express API originally created in CS-465. For this milestone I extended the same codebase to deliver reservation workflow support and operational analytics. The enhancements span the Mongoose schema, repository layer, services, and API routes and are consumed by both the backend and Angular admin tooling.</p>
+  <p>Enhancements Implemented</p>
+  <p>• Added embedded reservation documents to the trip schema (customer name/email, party size, optional notes, timestamps) while preserving existing indexing and validation.</p>
+  <p>• Created reservation and reporting services (`reservationService.bookTrip` / `getOccupancyReport`) that coordinate validation, atomic capacity checks, and aggregation pipelines.</p>
+  <p>• Introduced `POST /api/trips/:tripId/book` with Zod-powered validation to prevent over-booking and to return structured API errors when capacity is exhausted.</p>
+  <p>• Delivered `GET /api/reports/trips/occupancy` (JWT protected) to surface per-trip capacity, booked seats, remaining inventory, and occupancy percentage for administrators.</p>
+  <p>• Updated OpenAPI documentation, unit tests, and Angular service models to keep the full stack aligned with the new data contract.</p>
+  <p>Evidence & Testing</p>
+  <p>I captured booking and occupancy outputs as part of the verification process (`milestones/Screenshot 2025-10-26 at 8.07.20 PM.png` and `milestones/jwt_secret.png`). `npm test` now includes `src/test/bookingValidation.test.ts` to exercise the new validator, while manual curl smoke tests confirm successful reservations and accurate occupancy summaries under authentication.</p>
+  <p>Outcomes Demonstrated</p>
+  <p>• Outcome 3 (Algorithms & Data Structures): Aggregation pipelines and deterministic capacity checks show deliberate handling of data constraints and performance trade-offs.</p>
+  <p>• Outcome 4 (Software Engineering/Databases): Reservation flow leverages layered architecture, typed validation, and comprehensive documentation/tests to deliver maintainable value.</p>
+  <p>• Outcome 5 (Security Mindset): JWT-protected reporting, strict input validation, and idempotent capacity checks demonstrate attention to data integrity and misuse prevention.</p>
+  <p>Reflection</p>
+  <p>Designing the reservation workflow reinforced the importance of aligning schema design with real-world invariants (seats remaining, audit history) while keeping controllers thin and testable. The trickiest part was ensuring that caches, services, and Angular consumers all stayed in sync; centralising logic in `reservationService` and regenerating documentation/tests kept drift under control. Remaining work for a production context would include cancellation flows, reporting UI in the admin portal, and scripted regression tests against a dockerised MongoDB instance.</p>
+</article>

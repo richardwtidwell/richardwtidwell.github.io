@@ -33,34 +33,58 @@
 
     <section id="artifacts" class="section">
       <h2>Artifacts &amp; Enhancements</h2>
-      <article class="card">
+      <article class="card" id="artifact-se">
         <h3>Software Engineering &amp; Design</h3>
-        <p>TypeScript refactor of the Express API with layered architecture, structured logging, and schema validation.</p>
+        <p>TypeScript refactor of the Express API with layered architecture, structured logging, schema validation, and updated tooling.</p>
         <ul>
-          <li><strong>Highlight:</strong> <code>src/app.ts</code>, <code>src/app_api/services/tripService.ts</code></li>
-          <li><strong>Narrative:</strong> <a id="milestone-two-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/ModuleTwoJournal.docx?raw=1" target="_blank" rel="noopener">Module Two journal</a></li>
-          <li><strong>Repo Branch:</strong> <code>feature/ts-refactor</code> (if applicable)</li>
+          <li><strong>Highlights:</strong> <code>src/app.ts</code>, <code>src/app_api/services/tripService.ts</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-two-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/ModuleTwoJournal.docx?raw=1" target="_blank" rel="noopener">Module Two journal (DOCX)</a></li>
+          <li><a class="pill" href="assets/milestone2.html" target="_blank" rel="noopener">Read in browser</a></li>
         </ul>
+        <div class="evidence-block">
+          <h4>Evidence</h4>
+          <ul>
+            <li><code>npm run build</code> (TypeScript compilation)</li>
+            <li><code>npm test</code> (node:test suites)</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card" id="artifact-algo">
         <h3>Algorithms &amp; Data Structures</h3>
-        <p>Search acceleration via LRU cache, prefix trie, and paginated queries for trip discovery.</p>
+        <p>Search acceleration via LRU cache, prefix trie, server-side pagination, and MongoDB indexes to deliver consistent response times.</p>
         <ul>
-          <li><strong>Highlight:</strong> <code>src/app_api/utils/lruCache.ts</code>, <code>src/app_api/utils/prefixTrie.ts</code></li>
-          <li><strong>Narrative:</strong> <a id="milestone-three-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/CS-499%20Milestone%20Three.docx?raw=1" target="_blank" rel="noopener">Milestone Three narrative</a></li>
+          <li><strong>Highlights:</strong> <code>src/app_api/utils/lruCache.ts</code>, <code>src/app_api/utils/prefixTrie.ts</code></li>
           <li><strong>Benchmarks:</strong> <code>node dist/app_api/benchmarks/searchBench.js</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-three-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/CS-499%20Milestone%20Three.docx?raw=1" target="_blank" rel="noopener">Milestone Three narrative (DOCX)</a></li>
+          <li><a class="pill" href="assets/milestone3.html" target="_blank" rel="noopener">Read in browser</a></li>
         </ul>
+        <div class="evidence-block">
+          <h4>Evidence</h4>
+          <ul>
+            <li><code>npm test</code> — trie/LRU unit suites</li>
+            <li>Benchmark JSON output showing cache/trie latency</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="card" id="artifact-db">
         <h3>Databases</h3>
-        <p>Reservation subsystem enabling atomic bookings and occupancy analytics across the catalog.</p>
+        <p>Reservation subsystem enabling atomic bookings, reservation audit trails, and JWT-protected occupancy analytics.</p>
         <ul>
-          <li><strong>Highlight:</strong> <code>src/app_api/services/reservationService.ts</code>, <code>src/app_api/repositories/tripRepository.ts</code></li>
-          <li><strong>Narrative:</strong> <a id="milestone-four-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/CS-499%20Milestone%20Four%20Narrative.docx?raw=1" target="_blank" rel="noopener">Milestone Four narrative</a></li>
+          <li><strong>Highlights:</strong> <code>src/app_api/services/reservationService.ts</code>, <code>src/app_api/repositories/tripRepository.ts</code></li>
           <li><strong>API Endpoints:</strong> <code>/api/trips/:tripId/book</code>, <code>/api/reports/trips/occupancy</code></li>
+          <li><strong>Narrative:</strong> <a id="milestone-four-link" href="https://github.com/rtidwell/CS-465/blob/cs499/milestones/CS-499%20Milestone%20Four%20Narrative.docx?raw=1" target="_blank" rel="noopener">Milestone Four narrative (DOCX)</a></li>
+          <li><a class="pill" href="assets/milestone4.html" target="_blank" rel="noopener">Read in browser</a></li>
         </ul>
+        <div class="evidence-block">
+          <h4>Evidence</h4>
+          <ul>
+            <li><code>curl -X POST /api/trips/:tripId/book …</code> (booking screenshot)</li>
+            <li><code>curl -H "Authorization: Bearer $TOKEN" /api/reports/trips/occupancy</code> (occupancy screenshot)</li>
+            <li><a href="assets/evidence.html" target="_blank" rel="noopener">View screenshots &amp; commands</a></li>
+          </ul>
+        </div>
       </article>
     </section>
 

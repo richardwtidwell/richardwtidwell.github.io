@@ -134,6 +134,60 @@ main {
   gap: 0.4rem;
 }
 
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.pill:hover {
+  background: rgba(56, 189, 248, 0.25);
+}
+
+.evidence-block {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.evidence-block h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.evidence-block ul {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.narrative {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.92);
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.narrative h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.narrative p {
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+}
+
 .card code {
   background: rgba(56, 189, 248, 0.12);
   padding: 0.15rem 0.35rem;
