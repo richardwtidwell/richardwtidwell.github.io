@@ -249,23 +249,6 @@ details.accordion summary::-webkit-details-marker {
   color: var(--accent);
 }
 
-.todo-callout {
-  margin-top: 1.5rem;
-  padding: 1rem 1.25rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(56, 189, 248, 0.1);
-  border-radius: 10px;
-}
-
-.todo-callout h4 {
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.todo-callout li {
-  color: var(--muted);
-}
-
 .footnote {
   font-size: 0.85rem;
   color: var(--muted);

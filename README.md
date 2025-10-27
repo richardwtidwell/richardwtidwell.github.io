@@ -21,7 +21,7 @@ python3 -m http.server 4000
 2. If you export narratives to HTML, place them under `assets/` and add “Read in browser” links.
 3. Run `git status`, commit, and push to publish the latest page.
 
-## TODO
+## Notes
 
-- Add the professional self-assessment link once finalized.
-- Embed video iframe or streaming link if hosting the code-review clip elsewhere.
+- The code-review video is included in the final submission bundle alongside the repository archive.
+- Update screenshots or narratives by editing `assets/screenshots/` and the accordion content in `index.html`.
