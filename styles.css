@@ -134,22 +134,6 @@ main {
   gap: 0.4rem;
 }
 
-.pill {
-  display: inline-block;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--accent);
-  font-size: 0.85rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s ease;
-}
-
-.pill:hover {
-  background: rgba(56, 189, 248, 0.25);
-}
-
 .evidence-block {
   margin-top: 1.25rem;
   padding-top: 1rem;
@@ -209,16 +193,112 @@ main {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.self-assessment-links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
+}
+
+details.accordion {
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1rem 1.25rem;
+}
+
+details.accordion[open] {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+details.accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+}
+
+details.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__body {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.accordion__body ul,
+.accordion__body ol {
+  padding-left: 1.2rem;
+  display: block;
+  color: var(--muted);
+  gap: 0.4rem;
+}
+
+.accordion__body li {
+  margin-bottom: 0.3rem;
+}
+
+.reference-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.reference-list a {
+  color: var(--accent);
+}
+
+.todo-callout {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 10px;
+}
+
+.todo-callout h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.todo-callout li {
+  color: var(--muted);
+}
+
+.footnote {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.screenshot-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.screenshot-grid figure {
+  margin: 0;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screenshot-grid figcaption {
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 .footer {
